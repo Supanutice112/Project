@@ -30,6 +30,9 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
   app.get('/Login/login.html', function (req, res) {
     res.sendFile(__dirname + '/Login/login.html');
   });
+  app.get('/Location/Location.html', function (req, res) {
+    res.sendFile(__dirname + '/Location/Location.html');
+  });
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
