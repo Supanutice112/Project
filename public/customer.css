@@ -1,0 +1,150 @@
+body{
+  background-color: black;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.column {
+flex: 1;
+margin: 10px;
+text-align: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.order-details {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.map-container {
+  margin: 50px auto;
+  text-align: center;
+}
+
+iframe {
+  display: inline-block;
+  vertical-align: top;
+}
+.frame{
+  margin-left: 27%;
+}
+.statusX{
+  margin: 50px auto;
+  text-align: center;
+}
+img {
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  text-align: center;
+  border-radius: 10px;
+  
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 15%; /* กำหนดเป็นทรงกลม */
+
+}
+h1{
+  color: white;
+}
+
+h2{
+color: white;
+  margin-left: 2%;
+}
+
+@media (max-width: 768px) {
+  .column {
+    flex-basis: 50%;
+    margin: 10px;
+    text-align: center;
+  }
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        text-align: center;
+        border-radius: 10px;
+        
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+  .column {
+    flex-basis: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    
+    img {
+        width: 80%;
+        height: 50%;
+        object-fit: cover;
+        text-align: center;
+        border-radius: 10px;
+        
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+
+}
