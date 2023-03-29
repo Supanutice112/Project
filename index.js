@@ -33,19 +33,11 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
   app.get('/Location/Location.html', function (req, res) {
     res.sendFile(__dirname + '/Location/Location.html');
   });
-  app.get('/special.html', function (req, res) {
-    res.sendFile(__dirname + '/special.html');
-  });
   
-  app.get('/Snack.html', function (req, res) {
-    res.sendFile(__dirname + '/Snack.html');
+  app.get('/Shipping/shipping.html', function (req, res) {
+    res.sendFile(__dirname + '/Shipping/shipping.html');
   });
-  app.get('/Sushi.html', function (req, res) {
-    res.sendFile(__dirname + '/Sushi.html');
-  });
-  app.get('/Drink.html', function (req, res) {
-    res.sendFile(__dirname + '/Drink.html');
-  });
+
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
