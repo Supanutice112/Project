@@ -27,6 +27,9 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
     res.sendFile(__dirname + '/Homepage/Homepage3.html');
   });
   
+  app.get('/Login/login.html', function (req, res) {
+    res.sendFile(__dirname + '/Login/login.html');
+  });
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
