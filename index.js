@@ -51,7 +51,14 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
   app.get('/Drink.html', function (req, res) {
     res.sendFile(__dirname + '/Drink.html');
   });
-  
+
+  app.get('/views/restaurant', (req, res) => {
+    res.render('restaurant')
+  })
+  app.get('/views/customer', (req, res) => {
+    res.render('customer')
+  })
+
   app.post('/add-to-cart', (req, res) => {
   
     if (!req.session.cart) {
@@ -79,6 +86,19 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
       totalPrice: totalPrice
     });
   });
+
+  app.post('/customer', (req, res) => {
+    const { name, email, address ,totalPrice} = req.body;
+  
+    res.render('customer', { name, email, address ,totalPrice});
+  });
+  app.get('/views/customer1', (req, res) => {
+    res.render('customer1')
+  })
+  
+  app.get('/views/customer2', (req, res) => {
+    res.render('customer2')
+  })
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
