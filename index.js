@@ -51,7 +51,14 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
   app.get('/Drink.html', function (req, res) {
     res.sendFile(__dirname + '/Drink.html');
   });
-  
+
+  app.get('/views/restaurant', (req, res) => {
+    res.render('restaurant')
+  })
+  app.get('/views/customer', (req, res) => {
+    res.render('customer')
+  })
+
   app.post('/add-to-cart', (req, res) => {
   
     if (!req.session.cart) {
