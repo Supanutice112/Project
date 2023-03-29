@@ -87,7 +87,11 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
     });
   });
 
+  app.post('/customer', (req, res) => {
+    const { name, email, address ,totalPrice} = req.body;
   
+    res.render('customer', { name, email, address ,totalPrice});
+  });
   app.get('/views/customer1', (req, res) => {
     res.render('customer1')
   })
