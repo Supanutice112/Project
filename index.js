@@ -79,6 +79,15 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
       totalPrice: totalPrice
     });
   });
+
+  
+  app.get('/views/customer1', (req, res) => {
+    res.render('customer1')
+  })
+  
+  app.get('/views/customer2', (req, res) => {
+    res.render('customer2')
+  })
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
