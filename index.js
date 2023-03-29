@@ -52,6 +52,33 @@ app.get('/Homepage/Homepage3.html', function (req, res) {
     res.sendFile(__dirname + '/Drink.html');
   });
   
+  app.post('/add-to-cart', (req, res) => {
+  
+    if (!req.session.cart) {
+      req.session.cart = [];
+    }
+  
+    req.session.cart.push({
+      product: req.body.product,
+      price: req.body.price
+    });
+  
+    res.redirect('/shipping');
+  });
+  
+  app.get('/shipping', (req, res) => {
+    let cart = req.session.cart || [];
+    let totalPrice = 0;
+  
+    cart.forEach(function(item) {
+      totalPrice += parseInt(item.price);
+    });
+  
+    res.render(__dirname + '/Shipping/shipping.html', {
+      cart: cart,
+      totalPrice: totalPrice
+    });
+  });
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
