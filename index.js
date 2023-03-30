@@ -3,10 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
 const ejs = require('ejs');
-const mongo = require('./config/db');
 const session = require('express-session');
 
-mongo.connect();
 
 app.use(session({
   secret: 'your-secret-key',
