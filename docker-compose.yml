@@ -3,4 +3,4 @@ services:
   project:
     image: supanuticeza/devoppj:latest
     ports:
-      - "8115:3000"
+      - "8085:3000"
